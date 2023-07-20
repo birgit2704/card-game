@@ -2,6 +2,7 @@ let deckId = "";
 const drawBtn = document.getElementById("draw");
 const winMessEl = document.getElementById("winning-message");
 const remainCardsEl = document.getElementById("remaining-cards");
+const cardsContainer = document.getElementById("cards-container");
 let computerScoreEl = document.getElementById("computer-score");
 let yourScoreEl = document.getElementById("your-score");
 let computerScore = 0;
@@ -14,6 +15,12 @@ drawBtn.addEventListener("click", handleDraw);
 function handleGetNewDeck() {
   computerScore = 0;
   yourScore = 0;
+  cardsContainer.innerHTML = `
+  <div class="placeholder"></div>
+  <div class="placeholder"></div>
+  `;
+  winMessEl.textContent = "Game of War";
+
   showScores();
 
   fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
@@ -29,7 +36,7 @@ function handleDraw() {
   fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
     .then((res) => res.json())
     .then((data) => {
-      document.getElementById("cards-container").innerHTML = `
+      cardsContainer.innerHTML = `
       <img src="${data.cards[0].image}"/>
       <img src="${data.cards[1].image}"/>
       `;
