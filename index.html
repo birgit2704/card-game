@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Game</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="header">
+      <button id="new-deck">New Deck</button>
+      <h3 id="remaining-cards"></h3>
+    </div>
+    <h1 id="winning-message">Game of War</h1>
+    <h3 id="computer-score">Computer's score:</h3>
+    <div id="cards-container">
+      <div class="placeholder"></div>
+      <div class="placeholder"></div>
+      <!-- cards go here -->
+    </div>
+    <h3 id="your-score">Your score:</h3>
+    <button disabled id="draw">Draw</button>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("./imgs/table.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  user-select: none;
+  color: white;
+  text-align: center;
+}
+
+button {
+  font-size: 1.2rem;
+  font-family: "Exo 2", sans-serif;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  background-color: #fff100;
+  cursor: pointer;
+  border: none;
+}
+
+button:disabled {
+  background-color: lightgoldenrodyellow;
+  cursor: not-allowed;
+}
+#computer-score {
+  margin-top: 0;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+#new-deck {
+  align-self: flex-start;
+  margin-right: 40px;
+}
+
+#cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.placeholder,
+img {
+  width: 25%;
+  aspect-ratio: 5/7;
+}
+
+.placeholder {
+  border: 2px solid black;
+  border-radius: 10px;
+}
