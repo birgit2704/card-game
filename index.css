@@ -1,11 +1,14 @@
 body {
-  margin: 0;
+  max-width: 550px;
+  margin: 10px auto;
+  border: 3px solid black;
+  box-shadow: 0 0 30px black;
   padding: 0;
   box-sizing: border-box;
   background-image: url("./imgs/table.png");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-height: calc(100vh - 20px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
